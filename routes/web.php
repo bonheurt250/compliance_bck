@@ -52,6 +52,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/','WelcomeController@index');
+//those below route, aren't working properly, they are causing index page not working
 Route::get('mail/queue', function(){
 
 	   Mail::later(5,'emails.queued_email',['name'=>'Bonheur'],function($message)
